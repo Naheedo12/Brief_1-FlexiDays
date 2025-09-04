@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(42, 142, 158, 0.1);
+  padding: 0 32px;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo-text {
+  font-size: 22px;
+  font-weight: 800;
+  color: #1e7a8c;
+  letter-spacing: -0.5px;
+}
+
+.navigation {
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 16px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #64748b;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  transition: color 0.2s ease;
+}
+
+/* Remove the gradient animation on hover */
+.nav-link::before {
+  display: none;
+}
+
+/* Active state styling */
+.nav-link.active {
+  color: white;
+  background: linear-gradient(135deg, #2a8e9e, #1e7a8c);
+  box-shadow: 0 4px 12px rgba(42, 142, 158, 0.25);
+}
+
+/* Remove hover animations */
+.nav-link:hover {
+  color: #2a8e9e;
+  transform: none;
+  box-shadow: none;
+  background: rgba(42, 142, 158, 0.1);
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+}
+
+.notification-icon {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+  border-radius: 12px;
+  cursor: pointer;
+  position: relative;
+  border: 2px solid transparent;
+}
+
+.notification-icon::after {
+  content: "🔔";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+}
+
+.notification-icon:hover {
+  background: linear-gradient(135deg, #2a8e9e, #1e7a8c);
+  transform: translateY(-2px);
+  border-color: rgba(42, 142, 158, 0.2);
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 12px;
+}
+
+.user-avatar {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, #2a8e9e, #1e7a8c);
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(42, 142, 158, 0.2);
+}
+
+.user-avatar::after {
+  content: "👤";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+}
