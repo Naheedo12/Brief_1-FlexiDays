@@ -1,307 +1,319 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gestion des congés - FlexiDays</title>
-    <link rel="stylesheet" href="gestion_conge.css">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="footer.css">
-</head>
-<body>
+    <link rel="stylesheet" href="gestion_conge.css" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="footer.css" />
+  </head>
+
+  <body>
     <header class="header">
-        <div class="header-container">
-            <div class="logo-section">
-                <div class="logo-icon"></div>
-                <span class="logo-text">RH Dashboard</span>
-            </div>
-            <nav class="navigation">
-                <a href="index.html" class="nav-link">Dashboard</a>
-                <a href="mes_conges.html" class="nav-link">Mes congés</a>
-                <a href="demande_conge.html" class="nav-link">Demande de congé</a>
-                <a href="gestion_conge.html" class="nav-link active">Administration</a>
-            </nav>
-            <div class="user-section">
-                <div class="notification-icon"></div>
-                <div class="user-profile">
-                    <div class="user-avatar"></div>
-                </div>
-            </div>
+      <div class="header-container">
+        <div class="logo-section">
+          <div class="logo-icon"></div>
+          <span class="logo-text">RH Dashboard</span>
         </div>
+        <div class="hamburger">☰</div>
+        <nav class="navigation">
+          <a href="index.html" class="nav-link">Dashboard</a>
+          <a href="mes_conges.html" class="nav-link">Mes congés</a>
+          <a href="demande_conge.html" class="nav-link">Demande de congé</a>
+          <a href="gestion_conge.html" class="nav-link active"
+            >Administration</a
+          >
+        </nav>
+        <div class="user-section">
+          <div class="notification-icon"></div>
+          <div class="user-profile">
+            <div class="user-avatar"></div>
+          </div>
+        </div>
+      </div>
     </header>
 
-<main class="main-content">
-        <div class="container">
-            <div class="page-header">
-                <h1 class="page-title">Gestion des congés</h1>
-            </div>
-
-            <div class="stats-overview">
-                <div class="stat-card">
-                    <div class="stat-header">
-                        <span class="stat-title">En attente</span>
-                        <div class="stat-icon pending"></div>
-                    </div>
-                    <div class="stat-number">12</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-header">
-                        <span class="stat-title">Approuvées</span>
-                        <div class="stat-icon approved"></div>
-                    </div>
-                    <div class="stat-number">45</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-header">
-                        <span class="stat-title">Refusées</span>
-                        <div class="stat-icon rejected"></div>
-                    </div>
-                    <div class="stat-number">3</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-header">
-                        <span class="stat-title">Total ce mois</span>
-                        <div class="stat-icon total"></div>
-                    </div>
-                    <div class="stat-number">60</div>
-                </div>
-            </div>
-
-            <div class="requests-section">
-                <div class="section-header">
-                    <h2 class="section-title">Demandes de congés</h2>
-                    <div class="controls">
-                        <select class="status-filter">
-                            <option value="">Tous les statuts</option>
-                            <option value="pending">En attente</option>
-                            <option value="approved">Approuvées</option>
-                            <option value="rejected">Refusées</option>
-                        </select>
-                        <input type="text" class="search-input" placeholder="Rechercher un employé...">
-                    </div>
-                </div>
-
-                <div class="requests-list">
-                    <div class="request-card">
-                        <div class="employee-info">
-                            <div class="employee-avatar"></div>
-                            <div class="employee-details">
-                                <div class="employee-name">Rania Lbadawi</div>
-                                <div class="employee-role">Développeuse</div>
-                            </div>
-                        </div>
-                        <div class="request-details">
-                            <div class="request-row">
-                                <span class="label">Type:</span>
-                                <span class="value">Congés payés</span>
-                            </div>
-                            <div class="request-row">
-                                <span class="label">Du:</span>
-                                <span class="value">15 Jan 2025</span>
-                            </div>
-                            <div class="request-row">
-                                <span class="label">Au:</span>
-                                <span class="value">22 Jan 2025</span>
-                            </div>
-                            <div class="request-row">
-                                <span class="label">Durée:</span>
-                                <span class="value">5 jours</span>
-                            </div>
-                        </div>
-                        <div class="request-status">
-                            <span class="status-badge pending">En attente</span>
-                        </div>
-                        <div class="request-actions">
-                            <button class="btn btn-approve">
-                                <div class="btn-icon check"></div>
-                                Approuver
-                            </button>
-                            <button class="btn btn-reject">
-                                <div class="btn-icon cross"></div>
-                                Refuser
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="request-card">
-                        <div class="employee-info">
-                            <div class="employee-avatar"></div>
-                            <div class="employee-details">
-                                <div class="employee-name">Chaimaa fakiir</div>
-                                <div class="employee-role">Designer</div>
-                            </div>
-                        </div>
-                        <div class="request-details">
-                            <div class="request-row">
-                                <span class="label">Type:</span>
-                                <span class="value">Congé maladie</span>
-                            </div>
-                            <div class="request-row">
-                                <span class="label">Du:</span>
-                                <span class="value">20 Jan 2025</span>
-                            </div>
-                            <div class="request-row">
-                                <span class="label">Au:</span>
-                                <span class="value">21 Jan 2025</span>
-                            </div>
-                            <div class="request-row">
-                                <span class="label">Durée:</span>
-                                <span class="value">2 jours</span>
-                            </div>
-                        </div>
-                        
-                        <div class="request-status">
-                            <span class="status-badge pending">En attente</span>
-                        </div>
-                        <div class="request-actions">
-                            <button class="btn btn-approve">
-                                <div class="btn-icon check"></div>
-                                Approuver
-                            </button>
-                            <button class="btn btn-reject">
-                                <div class="btn-icon cross"></div>
-                                Refuser
-                            </button>
-                        </div>
-                    </div>
-                     <div class="request-card">
-                        <div class="employee-info">
-                            <div class="employee-avatar"></div>
-                            <div class="employee-details">
-                                <div class="employee-name">Latifa wamo</div>
-                                <div class="employee-role">Designer</div>
-                            </div>
-                        </div>
-                        <div class="request-details">
-                            <div class="request-row">
-                                <span class="label">Type:</span>
-                                <span class="value">Congé maladie</span>
-                            </div>
-                            <div class="request-row">
-                                <span class="label">Du:</span>
-                                <span class="value">20 Jan 2025</span>
-                            </div>
-                            <div class="request-row">
-                                <span class="label">Au:</span>
-                                <span class="value">21 Jan 2025</span>
-                            </div>
-                            <div class="request-row">
-                                <span class="label">Durée:</span>
-                                <span class="value">2 jours</span>
-                            </div>
-                        </div>
-                        
-                        <div class="request-status">
-                            <span class="status-badge pending">En attente</span>
-                        </div>
-                        <div class="request-actions">
-                            <button class="btn btn-approve">
-                                <div class="btn-icon check"></div>
-                                Approuver
-                            </button>
-                            <button class="btn btn-reject">
-                                <div class="btn-icon cross"></div>
-                                Refuser
-                            </button>
-                        </div>
-                    </div>
-                     <div class="request-card">
-                        <div class="employee-info">
-                            <div class="employee-avatar"></div>
-                            <div class="employee-details">
-                                <div class="employee-name">Salma Elqadi</div>
-                                <div class="employee-role">Designer</div>
-                            </div>
-                        </div>
-                        <div class="request-details">
-                            <div class="request-row">
-                                <span class="label">Type:</span>
-                                <span class="value">Congé maladie</span>
-                            </div>
-                            <div class="request-row">
-                                <span class="label">Du:</span>
-                                <span class="value">20 Jan 2025</span>
-                            </div>
-                            <div class="request-row">
-                                <span class="label">Au:</span>
-                                <span class="value">21 Jan 2025</span>
-                            </div>
-                            <div class="request-row">
-                                <span class="label">Durée:</span>
-                                <span class="value">2 jours</span>
-                            </div>
-                        </div>
-                        
-                        <div class="request-status">
-                            <span class="status-badge pending">En attente</span>
-                        </div>
-                        <div class="request-actions">
-                            <button class="btn btn-approve">
-                                <div class="btn-icon check"></div>
-                                Approuver
-                            </button>
-                            <button class="btn btn-reject">
-                                <div class="btn-icon cross"></div>
-                                Refuser
-                            </button>
-                        </div>
-                    </div>
-            </div>
-                <div class="pagination">
-                    <button class="pagination-btn prev">Précédent</button>
-                    <div class="pagination-info">Affichage de 1 à 4 sur 60 demandes</div>
-                    <div class="pagination-numbers">
-                        <button class="pagination-number active">1</button>
-                        <button class="pagination-number">2</button>
-                        <button class="pagination-number">3</button>
-                    </div>
-                    <button class="pagination-btn next">Suivant</button>
-                </div>
+    <main class="main-content">
+      <div class="container">
+        <div class="page-header">
+          <h1 class="page-title">Gestion des congés</h1>
         </div>
+
+        <div class="stats-overview">
+          <div class="stat-card">
+            <div class="stat-header">
+              <span class="stat-title">En attente</span>
+              <div class="stat-icon pending"></div>
+            </div>
+            <div class="stat-number">12</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-header">
+              <span class="stat-title">Approuvées</span>
+              <div class="stat-icon approved"></div>
+            </div>
+            <div class="stat-number">45</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-header">
+              <span class="stat-title">Refusées</span>
+              <div class="stat-icon rejected"></div>
+            </div>
+            <div class="stat-number">3</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-header">
+              <span class="stat-title">Total ce mois</span>
+              <div class="stat-icon total"></div>
+            </div>
+            <div class="stat-number">60</div>
+          </div>
+        </div>
+
+        <div class="requests-section">
+          <div class="section-header">
+            <h2 class="section-title">Demandes de congés</h2>
+            <div class="controls">
+              <select class="status-filter">
+                <option value="">Tous les statuts</option>
+                <option value="pending">En attente</option>
+                <option value="approved">Approuvées</option>
+                <option value="rejected">Refusées</option>
+              </select>
+              <input
+                type="text"
+                class="search-input"
+                placeholder="Rechercher un employé..."
+              />
+            </div>
+          </div>
+
+          <div class="requests-list">
+            <div class="request-card">
+              <div class="employee-info">
+                <div class="employee-avatar"></div>
+                <div class="employee-details">
+                  <div class="employee-name">Salma Elqadi</div>
+                  <div class="employee-role">Développeuse</div>
+                </div>
+              </div>
+              <div class="request-details">
+                <div class="request-row">
+                  <span class="label">Type:</span>
+                  <span class="value">Congés payés</span>
+                </div>
+                <div class="request-row">
+                  <span class="label">Du:</span>
+                  <span class="value">15 Jan 2025</span>
+                </div>
+                <div class="request-row">
+                  <span class="label">Au:</span>
+                  <span class="value">22 Jan 2025</span>
+                </div>
+                <div class="request-row">
+                  <span class="label">Durée:</span>
+                  <span class="value">5 jours</span>
+                </div>
+              </div>
+              <div class="request-status">
+                <span class="status-badge pending">En attente</span>
+              </div>
+              <div class="request-actions">
+                <button class="btn btn-approve">
+                  <div class="btn-icon check"></div>
+                  Approuver
+                </button>
+                <button class="btn btn-reject">
+                  <div class="btn-icon cross"></div>
+                  Refuser
+                </button>
+              </div>
+            </div>
+
+            <div class="request-card">
+              <div class="employee-info">
+                <div class="employee-avatar"></div>
+                <div class="employee-details">
+                  <div class="employee-name">Rania Lbadawii</div>
+                  <div class="employee-role">Designer</div>
+                </div>
+              </div>
+              <div class="request-details">
+                <div class="request-row">
+                  <span class="label">Type:</span>
+                  <span class="value">Congé maladie</span>
+                </div>
+                <div class="request-row">
+                  <span class="label">Du:</span>
+                  <span class="value">20 Jan 2025</span>
+                </div>
+                <div class="request-row">
+                  <span class="label">Au:</span>
+                  <span class="value">21 Jan 2025</span>
+                </div>
+                <div class="request-row">
+                  <span class="label">Durée:</span>
+                  <span class="value">2 jours</span>
+                </div>
+              </div>
+
+              <div class="request-status">
+                <span class="status-badge pending">En attente</span>
+              </div>
+              <div class="request-actions">
+                <button class="btn btn-approve">
+                  <div class="btn-icon check"></div>
+                  Approuver
+                </button>
+                <button class="btn btn-reject">
+                  <div class="btn-icon cross"></div>
+                  Refuser
+                </button>
+              </div>
+            </div>
+            <div class="request-card">
+              <div class="employee-info">
+                <div class="employee-avatar"></div>
+                <div class="employee-details">
+                  <div class="employee-name">Chaimaa fakiir</div>
+                  <div class="employee-role">Designer</div>
+                </div>
+              </div>
+              <div class="request-details">
+                <div class="request-row">
+                  <span class="label">Type:</span>
+                  <span class="value">Congé maladie</span>
+                </div>
+                <div class="request-row">
+                  <span class="label">Du:</span>
+                  <span class="value">20 Jan 2025</span>
+                </div>
+                <div class="request-row">
+                  <span class="label">Au:</span>
+                  <span class="value">21 Jan 2025</span>
+                </div>
+                <div class="request-row">
+                  <span class="label">Durée:</span>
+                  <span class="value">2 jours</span>
+                </div>
+              </div>
+
+              <div class="request-status">
+                <span class="status-badge pending">En attente</span>
+              </div>
+              <div class="request-actions">
+                <button class="btn btn-approve">
+                  <div class="btn-icon check"></div>
+                  Approuver
+                </button>
+                <button class="btn btn-reject">
+                  <div class="btn-icon cross"></div>
+                  Refuser
+                </button>
+              </div>
+            </div>
+            <div class="request-card">
+              <div class="employee-info">
+                <div class="employee-avatar"></div>
+                <div class="employee-details">
+                  <div class="employee-name">Latifa wamo</div>
+                  <div class="employee-role">Designer</div>
+                </div>
+              </div>
+              <div class="request-details">
+                <div class="request-row">
+                  <span class="label">Type:</span>
+                  <span class="value">Congé maladie</span>
+                </div>
+                <div class="request-row">
+                  <span class="label">Du:</span>
+                  <span class="value">20 Jan 2025</span>
+                </div>
+                <div class="request-row">
+                  <span class="label">Au:</span>
+                  <span class="value">21 Jan 2025</span>
+                </div>
+                <div class="request-row">
+                  <span class="label">Durée:</span>
+                  <span class="value">2 jours</span>
+                </div>
+              </div>
+
+              <div class="request-status">
+                <span class="status-badge pending">En attente</span>
+              </div>
+              <div class="request-actions">
+                <button class="btn btn-approve">
+                  <div class="btn-icon check"></div>
+                  Approuver
+                </button>
+                <button class="btn btn-reject">
+                  <div class="btn-icon cross"></div>
+                  Refuser
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="pagination">
+            <button class="pagination-btn prev">Précédent</button>
+            <div class="pagination-info">
+              Affichage de 1 à 4 sur 60 demandes
+            </div>
+            <div class="pagination-numbers">
+              <button class="pagination-number active">1</button>
+              <button class="pagination-number">2</button>
+              <button class="pagination-number">3</button>
+            </div>
+            <button class="pagination-btn next">Suivant</button>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3 class="footer-title">Contact RH</h3>
-                <div class="contact-item">
-                    <span class="contact-icon"></span>
-                    <span>rh@entreprise.com</span>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-icon"></span>
-                    <span>+33 1 23 45 67 89</span>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-icon"></span>
-                    <span>Lun-Ven 9h-17h</span>
-                </div>
-            </div>
-            
-            <div class="footer-section">
-                <h3 class="footer-title">Adresse</h3>
-                <p>123 Rue de l'Entreprise</p>
-                <p>75001 Paris, France</p>
-            </div>
-            
-            <div class="footer-section">
-                <h3 class="footer-title">Liens utiles</h3>
-                <a href="#" class="footer-link">Politique de congés</a>
-                <a href="#" class="footer-link">Guide employé</a>
-                <a href="#" class="footer-link">Support technique</a>
-            </div>
-            
-            <div class="footer-section">
-                <h3 class="footer-title">Assistance</h3>
-                <a href="#" class="footer-link">Centre d'aide</a>
-                <a href="#" class="footer-link">FAQ</a>
-                <a href="#" class="footer-link">Signaler un problème</a>
-            </div>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3 class="footer-title">Contact RH</h3>
+          <div class="contact-item">
+            <span class="contact-icon"></span>
+            <span>rh@entreprise.com</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon"></span>
+            <span>+33 1 23 45 67 89</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon"></span>
+            <span>Lun-Ven 9h-17h</span>
+          </div>
         </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2025 Entreprise. Tous droits réservés.</p>
+
+        <div class="footer-section">
+          <h3 class="footer-title">Adresse</h3>
+          <p>123 Rue de l'Entreprise</p>
+          <p>75001 Paris, France</p>
         </div>
+
+        <div class="footer-section">
+          <h3 class="footer-title">Liens utiles</h3>
+          <a href="#" class="footer-link">Politique de congés</a>
+          <a href="#" class="footer-link">Guide employé</a>
+          <a href="#" class="footer-link">Support technique</a>
+        </div>
+
+        <div class="footer-section">
+          <h3 class="footer-title">Assistance</h3>
+          <a href="#" class="footer-link">Centre d'aide</a>
+          <a href="#" class="footer-link">FAQ</a>
+          <a href="#" class="footer-link">Signaler un problème</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Entreprise. Tous droits réservés.</p>
+      </div>
     </footer>
-</body>
+    <script src="header.js"></script>
+  </body>
 </html>

@@ -120,5 +120,62 @@
   color: #94a3b8;
   font-size: 14px;
   font-weight: 500;
-  animation: fadeIn 1s ease-out 0.5s both;
+}
+
+/* Tablette : réduire les espacements */
+@media (max-width: 1024px) {
+  .footer {
+    padding: 40px 24px 20px;
+  }
+
+  .footer-section h3.footer-title {
+    font-size: 18px;
+  }
+
+  .footer-section p,
+  .footer-link,
+  .contact-item {
+    font-size: 14px;
+  }
+}
+
+/* Mobile : sections en pile verticale */
+@media (max-width: 768px) {
+  .footer {
+    padding: 32px 16px 20px;
+    margin-top: 40px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr; /* une seule colonne */
+    gap: 24px;
+    text-align: center;
+  }
+
+  .footer-section h3.footer-title {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .footer-section h3.footer-title::after {
+    left: 50%;
+    transform: translateX(-50%); /* centrer le trait décoratif */
+  }
+
+  .contact-item {
+    justify-content: center;
+  }
+
+  .footer-link {
+    justify-content: center;
+  }
+
+  .footer-bottom {
+    margin-top: 32px;
+    padding-top: 20px;
+  }
+
+  .footer-bottom p {
+    font-size: 13px;
+  }
 }

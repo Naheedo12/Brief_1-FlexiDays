@@ -1,184 +1,192 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard RH - FlexiDays</title>
-    <link rel="stylesheet" href="dashboard.css">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="footer.css">
-</head>
-<body>
+    <link rel="stylesheet" href="dashboard.css" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="footer.css" />
+  </head>
+  <body>
     <header class="header">
-        <div class="header-container">
-            <div class="logo-section">
-                <span class="logo-text">RH Dashboard</span>
-            </div>
-            <nav class="navigation">
-                <a href="dashboard.html" class="nav-link active">Dashboard</a>
-                <a href="mes_conges.html" class="nav-link">Mes congés</a>
-                <a href="demande_conge.html" class="nav-link">Demande de congé</a>
-                <a href="gestion_conge.html" class="nav-link">Administration</a>
-            </nav>
-            <div class="user-section">
-                <div class="notification-icon"></div>
-                <div class="user-profile">
-                    <div class="user-avatar"></div>
-                </div>
-            </div>
+      <div class="header-container">
+        <div class="logo-section">
+          <span class="logo-text">RH Dashboard</span>
         </div>
+        <div class="hamburger">☰</div>
+        <nav class="navigation">
+          <a href="index.html" class="nav-link active">Dashboard</a>
+          <a href="mes_conges.html" class="nav-link">Mes congés</a>
+          <a href="demande_conge.html" class="nav-link">Demande de congé</a>
+          <a href="gestion_conge.html" class="nav-link">Administration</a>
+        </nav>
+        <div class="user-section">
+          <div class="notification-icon"></div>
+          <div class="user-profile">
+            <div class="user-avatar"></div>
+          </div>
+        </div>
+      </div>
     </header>
 
     <main class="main-content">
-        <div class="container">
-            <div class="page-header">
-                <h1 class="page-title">Tableau de bord</h1>
-                <p class="page-subtitle">Bienvenue, gérez vos congés et suivez vos demandes</p>
-            </div>
-
-            <div class="notifications-section">
-                <div class="section-header">
-                    <h2 class="section-title">Notifications importantes</h2>
-                    <div class="carousel-controls">
-                        <button class="carousel-btn prev"></button>
-                        <button class="carousel-btn next"></button>
-                    </div>
-                </div>
-                <div class="notification-card">
-                    <div class="notification-content">
-                        <h3 class="notification-title">Fermeture exceptionnelle</h3>
-                        <p class="notification-text">Les bureaux seront fermés le 15 mars 2025 pour maintenance. Planifiez vos congés en conséquence.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-header">
-                        <h3 class="stat-title">Solde de congés</h3>
-                        <div class="stat-icon calendar"></div>
-                    </div>
-                    <div class="stat-content">
-                        <div class="stat-item">
-                            <span class="stat-label">Congés payés</span>
-                            <span class="stat-value">25 jours</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-label">RTT</span>
-                            <span class="stat-value">8 jours</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-label">Congés maladie</span>
-                            <span class="stat-value">5 jours</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="stat-card">
-                    <div class="stat-header">
-                        <h3 class="stat-title">Demandes en cours</h3>
-                        <div class="stat-icon clock"></div>
-                    </div>
-                    <div class="stat-content">
-                        <div class="stat-item">
-                            <span class="stat-label">En attente</span>
-                            <span class="stat-value">2</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-label">Approuvées</span>
-                            <span class="stat-value">5</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-label">Refusées</span>
-                            <span class="stat-value">0</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="stat-card">
-                    <div class="stat-header">
-                        <h3 class="stat-title">Prochains congés</h3>
-                        <div class="stat-icon plane"></div>
-                    </div>
-                    <div class="stat-content">
-                        <div class="upcoming-leave">
-                            <span class="leave-title">Congés d'été</span>
-                            <span class="leave-date">15 - 30 juillet 2025</span>
-                        </div>
-                        <div class="upcoming-leave">
-                            <span class="leave-title">Pont de mai</span>
-                            <span class="leave-date">1 - 2 mai 2025</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="actions-section">
-                <h2 class="section-title">Actions rapides</h2>
-                <div class="actions-grid">
-                    <a href="demande_conge.html" class="action-card">
-                        <div class="action-icon plus"></div>
-                        <span class="action-text">Nouvelle demande</span>
-                    </a>
-                    <a href="mes_conges.html" class="action-card">
-                        <div class="action-icon list"></div>
-                        <span class="action-text">Mes congés</span>
-                    </a>
-                    <a href="#" class="action-card">
-                        <div class="action-icon chart"></div>
-                        <span class="action-text">Statistiques</span>
-                    </a>
-                    <a href="#" class="action-card">
-                        <div class="action-icon settings"></div>
-                        <span class="action-text">Paramètres</span>
-                    </a>
-                </div>
-            </div>
+      <div class="container">
+        <div class="page-header">
+          <h1 class="page-title">Tableau de bord</h1>
+          <p class="page-subtitle">
+            Bienvenue, gérez vos congés et suivez vos demandes
+          </p>
         </div>
+
+        <div class="notifications-section">
+          <div class="section-header">
+            <h2 class="section-title">Notifications importantes</h2>
+            <div class="carousel-controls">
+              <button class="carousel-btn prev"></button>
+              <button class="carousel-btn next"></button>
+            </div>
+          </div>
+          <div class="notification-card">
+            <div class="notification-content">
+              <h3 class="notification-title">Fermeture exceptionnelle</h3>
+              <p class="notification-text">
+                Les bureaux seront fermés le 15 mars 2025 pour maintenance.
+                Planifiez vos congés en conséquence.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-header">
+              <h3 class="stat-title">Solde de congés</h3>
+              <div class="stat-icon calendar"></div>
+            </div>
+            <div class="stat-content">
+              <div class="stat-item">
+                <span class="stat-label">Congés payés</span>
+                <span class="stat-value">25 jours</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">RTT</span>
+                <span class="stat-value">8 jours</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Congés maladie</span>
+                <span class="stat-value">5 jours</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-header">
+              <h3 class="stat-title">Demandes en cours</h3>
+              <div class="stat-icon clock"></div>
+            </div>
+            <div class="stat-content">
+              <div class="stat-item">
+                <span class="stat-label">En attente</span>
+                <span class="stat-value">2</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Approuvées</span>
+                <span class="stat-value">5</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-label">Refusées</span>
+                <span class="stat-value">0</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-header">
+              <h3 class="stat-title">Prochains congés</h3>
+              <div class="stat-icon plane"></div>
+            </div>
+            <div class="stat-content">
+              <div class="upcoming-leave">
+                <span class="leave-title">Congés d'été</span>
+                <span class="leave-date">15 - 30 juillet 2025</span>
+              </div>
+              <div class="upcoming-leave">
+                <span class="leave-title">Pont de mai</span>
+                <span class="leave-date">1 - 2 mai 2025</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="actions-section">
+          <h2 class="section-title">Actions rapides</h2>
+          <div class="actions-grid">
+            <a href="demande_conge.html" class="action-card">
+              <div class="action-icon plus"></div>
+              <span class="action-text">Nouvelle demande</span>
+            </a>
+            <a href="mes_conges.html" class="action-card">
+              <div class="action-icon list"></div>
+              <span class="action-text">Mes congés</span>
+            </a>
+            <a href="#" class="action-card">
+              <div class="action-icon chart"></div>
+              <span class="action-text">Statistiques</span>
+            </a>
+            <a href="#" class="action-card">
+              <div class="action-icon settings"></div>
+              <span class="action-text">Paramètres</span>
+            </a>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3 class="footer-title">Contact RH</h3>
-                <div class="contact-item">
-                    <span class="contact-icon"></span>
-                    <span>rh@entreprise.com</span>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-icon"></span>
-                    <span>+33 1 23 45 67 89</span>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-icon"></span>
-                    <span>Lun-Ven 9h-17h</span>
-                </div>
-            </div>
-            
-            <div class="footer-section">
-                <h3 class="footer-title">Adresse</h3>
-                <p>123 Rue de l'Entreprise</p>
-                <p>75001 Paris, France</p>
-            </div>
-            
-            <div class="footer-section">
-                <h3 class="footer-title">Liens utiles</h3>
-                <a href="#" class="footer-link">Politique de congés</a>
-                <a href="#" class="footer-link">Guide employé</a>
-                <a href="#" class="footer-link">Support technique</a>
-            </div>
-            
-            <div class="footer-section">
-                <h3 class="footer-title">Assistance</h3>
-                <a href="#" class="footer-link">Centre d'aide</a>
-                <a href="#" class="footer-link">FAQ</a>
-                <a href="#" class="footer-link">Signaler un problème</a>
-            </div>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3 class="footer-title">Contact RH</h3>
+          <div class="contact-item">
+            <span class="contact-icon"></span>
+            <span>rh@entreprise.com</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon"></span>
+            <span>+33 1 23 45 67 89</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon"></span>
+            <span>Lun-Ven 9h-17h</span>
+          </div>
         </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2025 Entreprise. Tous droits réservés.</p>
+
+        <div class="footer-section">
+          <h3 class="footer-title">Adresse</h3>
+          <p>123 Rue de l'Entreprise</p>
+          <p>75001 Paris, France</p>
         </div>
+
+        <div class="footer-section">
+          <h3 class="footer-title">Liens utiles</h3>
+          <a href="#" class="footer-link">Politique de congés</a>
+          <a href="#" class="footer-link">Guide employé</a>
+          <a href="#" class="footer-link">Support technique</a>
+        </div>
+
+        <div class="footer-section">
+          <h3 class="footer-title">Assistance</h3>
+          <a href="#" class="footer-link">Centre d'aide</a>
+          <a href="#" class="footer-link">FAQ</a>
+          <a href="#" class="footer-link">Signaler un problème</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Entreprise. Tous droits réservés.</p>
+      </div>
     </footer>
-</body>
+
+    <script src="header.js"></script>
+  </body>
 </html>

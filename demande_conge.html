@@ -1,164 +1,192 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Demande de congé - FlexiDays</title>
-    <link rel="stylesheet" href="demande_conge.css">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="footer.css">
-</head>
-<body>
+    <link rel="stylesheet" href="demande_conge.css" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="footer.css" />
+  </head>
+  <body>
     <header class="header">
-        <div class="header-container">
-            <div class="logo-section">
-                <div class="logo-icon"></div>
-                <span class="logo-text">RH Dashboard</span>
-            </div>
-            <nav class="navigation">
-                <a href="index.html" class="nav-link">Dashboard</a>
-                <a href="mes_conges.html" class="nav-link">Mes congés</a>
-                <a href="demande_conge.html" class="nav-link active">Demande de congé</a>
-                <a href="gestion_conge.html" class="nav-link">Administration</a>
-            </nav>
-            <div class="user-section">
-                <div class="notification-icon"></div>
-                <div class="user-profile">
-                    <div class="user-avatar"></div>
-                </div>
-            </div>
+      <div class="header-container">
+        <div class="logo-section">
+          <div class="logo-icon"></div>
+          <span class="logo-text">RH Dashboard</span>
         </div>
+        <div class="hamburger">☰</div>
+        <nav class="navigation">
+          <a href="index.html" class="nav-link">Dashboard</a>
+          <a href="mes_conges.html" class="nav-link">Mes congés</a>
+          <a href="demande_conge.html" class="nav-link active"
+            >Demande de congé</a
+          >
+          <a href="gestion_conge.html" class="nav-link">Administration</a>
+        </nav>
+        <div class="user-section">
+          <div class="notification-icon"></div>
+          <div class="user-profile">
+            <div class="user-avatar"></div>
+          </div>
+        </div>
+      </div>
     </header>
 
     <main class="main-content">
-        <div class="container">
-            <div class="page-header">
-                <h1 class="page-title">Nouvelle demande de congé</h1>
-                <p class="page-subtitle">Remplissez le formulaire ci-dessous pour soumettre votre demande de congé.</p>
-            </div>
-
-            <div class="form-container">
-                <form class="leave-form">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="start-date" class="form-label">Date de début</label>
-                            <div class="date-input-wrapper">
-                                <input type="text" id="start-date" class="form-input" placeholder="jj/mm/aaaa">
-                                <div class="calendar-icon"></div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="end-date" class="form-label">Date de fin</label>
-                            <div class="date-input-wrapper">
-                                <input type="text" id="end-date" class="form-input" placeholder="jj/mm/aaaa">
-                                <div class="calendar-icon"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="leave-type" class="form-label">Type de congé</label>
-                        <select id="leave-type" class="form-select">
-                            <option value="">Sélectionnez un type de congé</option>
-                            <option value="conges-payes">Congés payés</option>
-                            <option value="rtt">RTT</option>
-                            <option value="conges-maladie">Congés maladie</option>
-                            <option value="conges-maternite">Congés maternité</option>
-                            <option value="conges-paternite">Congés paternité</option>
-                            <option value="formation">Formation</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="justification" class="form-label">Justification</label>
-                        <textarea id="justification" class="form-textarea" rows="4" placeholder="Décrivez la raison de votre demande de congé..."></textarea>
-                    </div>
-                    
-                    <div class="info-box">
-                        <div class="info-icon"></div>
-                        <div class="info-content">
-                            <p class="info-title">Information importante :</p>
-                            <p class="info-text">Votre demande sera transmise à votre manager pour validation. Vous recevrez une notification par email une fois la décision prise.</p>
-                        </div>
-                    </div>
-
-                    <div class="form-actions">
-                        <button type="submit" class="btn btn-primary">
-                            <div class="btn-icon send"></div>
-                            Soumettre la demande
-                        </button>
-                        <button type="reset" class="btn btn-secondary">
-                            <div class="btn-icon reset"></div>
-                            Réinitialiser
-                        </button>
-                    </div>
-                </form>
-
-                <div class="recent-requests">
-                    <h2 class="section-title">Mes dernières demandes</h2>
-                    <div class="request-list">
-                        <div class="request-item">
-                            <div class="request-info">
-                                <div class="request-type">Congés payés</div>
-                                <div class="request-dates">15/03/2025 - 19/03/2025</div>
-                            </div>
-                            <div class="request-status pending">En attente</div>
-                        </div>
-                        <div class="request-item">
-                            <div class="request-info">
-                                <div class="request-type">Congé personnel</div>
-                                <div class="request-dates">08/02/2025 - 08/02/2025</div>
-                            </div>
-                            <div class="request-status approved">Approuvé</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="page-header">
+          <h1 class="page-title">Nouvelle demande de congé</h1>
+          <p class="page-subtitle">
+            Remplissez le formulaire ci-dessous pour soumettre votre demande de
+            congé.
+          </p>
         </div>
+
+        <div class="form-container">
+          <form class="leave-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="start-date" class="form-label">Date de début</label>
+                <div class="date-input-wrapper">
+                  <input
+                    type="text"
+                    id="start-date"
+                    class="form-input"
+                    placeholder="jj/mm/aaaa"
+                  />
+                  <div class="calendar-icon"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="end-date" class="form-label">Date de fin</label>
+                <div class="date-input-wrapper">
+                  <input
+                    type="text"
+                    id="end-date"
+                    class="form-input"
+                    placeholder="jj/mm/aaaa"
+                  />
+                  <div class="calendar-icon"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="leave-type" class="form-label">Type de congé</label>
+              <select id="leave-type" class="form-select">
+                <option value="">Sélectionnez un type de congé</option>
+                <option value="conges-payes">Congés payés</option>
+                <option value="rtt">RTT</option>
+                <option value="conges-maladie">Congés maladie</option>
+                <option value="conges-maternite">Congés maternité</option>
+                <option value="conges-paternite">Congés paternité</option>
+                <option value="formation">Formation</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="justification" class="form-label"
+                >Justification</label
+              >
+              <textarea
+                id="justification"
+                class="form-textarea"
+                rows="4"
+                placeholder="Décrivez la raison de votre demande de congé..."
+              ></textarea>
+            </div>
+
+            <div class="info-box">
+              <div class="info-icon"></div>
+              <div class="info-content">
+                <p class="info-title">Information importante :</p>
+                <p class="info-text">
+                  Votre demande sera transmise à votre manager pour validation.
+                  Vous recevrez une notification par email une fois la décision
+                  prise.
+                </p>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">
+                <div class="btn-icon send"></div>
+                Soumettre la demande
+              </button>
+              <button type="reset" class="btn btn-secondary">
+                <div class="btn-icon reset"></div>
+                Réinitialiser
+              </button>
+            </div>
+          </form>
+
+          <div class="recent-requests">
+            <h2 class="section-title">Mes dernières demandes</h2>
+            <div class="request-list">
+              <div class="request-item">
+                <div class="request-info">
+                  <div class="request-type">Congés payés</div>
+                  <div class="request-dates">15/03/2025 - 19/03/2025</div>
+                </div>
+                <div class="request-status pending">En attente</div>
+              </div>
+              <div class="request-item">
+                <div class="request-info">
+                  <div class="request-type">Congé personnel</div>
+                  <div class="request-dates">08/02/2025 - 08/02/2025</div>
+                </div>
+                <div class="request-status approved">Approuvé</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3 class="footer-title">Contact RH</h3>
-                <div class="contact-item">
-                    <span class="contact-icon"></span>
-                    <span>rh@entreprise.com</span>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-icon"></span>
-                    <span>+33 1 23 45 67 89</span>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-icon"></span>
-                    <span>Lun-Ven 9h-17h</span>
-                </div>
-            </div>
-            
-            <div class="footer-section">
-                <h3 class="footer-title">Adresse</h3>
-                <p>123 Rue de l'Entreprise</p>
-                <p>75001 Paris, France</p>
-            </div>
-            
-            <div class="footer-section">
-                <h3 class="footer-title">Liens utiles</h3>
-                <a href="#" class="footer-link">Politique de congés</a>
-                <a href="#" class="footer-link">Guide employé</a>
-                <a href="#" class="footer-link">Support technique</a>
-            </div>
-            
-            <div class="footer-section">
-                <h3 class="footer-title">Assistance</h3>
-                <a href="#" class="footer-link">Centre d'aide</a>
-                <a href="#" class="footer-link">FAQ</a>
-                <a href="#" class="footer-link">Signaler un problème</a>
-            </div>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3 class="footer-title">Contact RH</h3>
+          <div class="contact-item">
+            <span class="contact-icon"></span>
+            <span>rh@entreprise.com</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon"></span>
+            <span>+33 1 23 45 67 89</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon"></span>
+            <span>Lun-Ven 9h-17h</span>
+          </div>
         </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2025 Entreprise. Tous droits réservés.</p>
+
+        <div class="footer-section">
+          <h3 class="footer-title">Adresse</h3>
+          <p>123 Rue de l'Entreprise</p>
+          <p>75001 Paris, France</p>
         </div>
+
+        <div class="footer-section">
+          <h3 class="footer-title">Liens utiles</h3>
+          <a href="#" class="footer-link">Politique de congés</a>
+          <a href="#" class="footer-link">Guide employé</a>
+          <a href="#" class="footer-link">Support technique</a>
+        </div>
+
+        <div class="footer-section">
+          <h3 class="footer-title">Assistance</h3>
+          <a href="#" class="footer-link">Centre d'aide</a>
+          <a href="#" class="footer-link">FAQ</a>
+          <a href="#" class="footer-link">Signaler un problème</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Entreprise. Tous droits réservés.</p>
+      </div>
     </footer>
-</body>
+    <script src="header.js"></script>
+  </body>
 </html>
